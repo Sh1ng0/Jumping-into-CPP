@@ -1,0 +1,63 @@
+/*4. Expand the password checking program from earlier in this chapter and make it take multiple (3)
+usernames, each with their own password, and ensure that the right username is used for the
+right password. Provide the ability to prompt user's again if the first login attempt failed. Think
+about how easy (or hard) it is to do this for a lot of usernames and passwords. */
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() /* Declaraciçon de strings y primer input de datos*/
+{
+    string user;
+    string pass;
+
+    cout << "Introduce your username: ";
+    getline ( cin, user,'\n');
+    cout << "Introduce your password: ";
+    getline ( cin, pass,'\n');
+
+    if ( user == "jhon" && pass == "doe") 
+    {
+        cout << "Acces granted" << endl;
+    }
+    else if ( user == "jane" && pass == "doe")
+    {
+        cout << "Acces granted" << endl;
+    }
+    else if ( user == "jordi" && pass == "dei")
+    {
+        cout << "Acces granted" << endl;
+    }
+
+    else 
+    {
+
+            cout << "Try again" << endl;
+
+            cout << "Introduce your username: ";
+            getline ( cin, user,'\n');
+            cout << "Introduce your password: ";
+            getline ( cin, pass,'\n');
+
+    if ( user == "jose" && pass == "arbizu")
+    {
+        cout << "Acces granted" << endl;
+    }
+    else if ( user == "yaiza" && pass == "satizabal")
+    {
+        cout << "Acces granted" << endl;
+    }
+    else if ( user == "jordi" && pass == "moreu")
+    {
+        cout << "Acces granted" << endl;
+    }
+    else
+    {
+        cout << "Acces denied" << endl;
+    }
+    }
+return 0;
+}
